@@ -78,11 +78,5 @@ ul {
 }
 
 .equipe {
-    display: flex;
-    gap: 10px;
-}
-
-.equipe > div {
-    flex: 1;
-    padding: 10px;
+    width: 100%;
 }

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livrex</title>
     <link rel="stylesheet" href="..\assets\style.css">
+    <style>
+        img {
+            height: 200px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,35 +27,31 @@
         </ul>
     </nav>
     <main>
-        <h1>Nossa Equipe</h1>
-        <h2>Conheça os integrantes do projeto:</h2>
+        <h2>Nossa Equipe</h2>
+        <h3>Conheça os integrantes do projeto:</h3>
 
-        <div class="equipe">
-            <div>
-                <h3>João Vitor Dias Venchiarutti dos Santos</h3>
-                <img src="..\assets\img\Joao.jpg" alt="Foto João" width="200px"> <br>
-                Matrícula: 202502451083
-            </div>
-
-            <div>
-                <h3>Hugo Ribeiro Bernardes</h3>
-                <img src="..\assets\img\Hugo.jpg" alt="Foto Hugo" width="200px"> <br>
-                Matrícula: 202502276885
-            </div>
-
-            <div>
-                <h3>Luana Lucia Belloli Bani</h3>
-                <img src="..\assets\img\Luana.jpg" alt="Foto Luana" width="200px"> <br>
-                Matrícula: 202503324239
-            </div>
-
-            <div>
-                <h3>Giovanna Souza Ferreira</h3>
-                <img src="..\assets\img\Giovanna.jpg" alt="Foto Giovanna" width="200px"> <br>
-                Matrícula: 202503815691
-            </div>
-        </div>
-
+        <table class="equipe">
+            <thead>
+                <tr>
+                    <td><b>João Vitor Dias Venchiarutti dos Santos</b></td>
+                    <td><b>Hugo Ribeiro Bernardes</b></td>
+                    <td><b>Luana Lucia Belloli Bani</b></td>
+                    <td><b>Giovanna Souza Ferreira</b></td>
+                </tr>
+                <tr>
+                    <td><img src="..\assets\img\Joao.jpg" alt="Foto João"></td>
+                    <td><img src="..\assets\img\Hugo.jpg" alt=""></td>
+                    <td><img src="..\assets\img\Luana.jpg" alt="Foto Luana"></td>
+                    <td><img src="..\assets\img\Giovanna.jpg" alt="Foto Giovanna"></td>
+                </tr>
+                <tr>
+                    <td>Matrícula: 202502451083</td>
+                    <td>Matrícula: 202502276885</td>
+                    <td>Matrícula: 202503324239</td>
+                    <td>Matrícula: 202503815691</td>
+                </tr>
+            </thead>
+        </table>
     </main>
     <footer>
         Este é um projeto com fim avaliativo pela universidade dos autores.
