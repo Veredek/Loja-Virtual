@@ -4,35 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livrex</title>
+    <link rel="stylesheet" href="..\assets\style.css">
 </head>
 <body>
     <header>
-       <!-- <img src="../assets/img/LOGO.png" alt="logo Livrex" width="40"> -->
-       <h1>Livrex </h1>
-     
-
-
+       <div class="logo-container">
+            <img src="..\assets\img\logo.png" alt="" class="logo">
+            <span class="Livrex">Livrex</span>
+        </div>
     </header>
     <nav>
-        <a href="index.html">Home</a>
-        <strong>Catálogo</strong>
-        <a href="sac.html">SAC</a>
-        <a href="equipe.html">Equipe</a>
+        <ul>
+            <a href="index.html">Home</a>
+            Catálogo
+            <a href="sac.html">SAC</a>
+            <a href="equipe.html">Equipe</a>
+        </ul>
     </nav>
     <main>
-            <H2>Catalogo:</H2>
-                <h3>Bem-vindo ao nosso catálogo!</h3>
+            <h1>Catálogo</h1>
+                <h2>Bem-vindo ao nosso catálogo!</h2>
                  </H4>Aqui você encontrará uma seleção especial de livros de diversos gêneros para todos os gostos. Explore as obras disponíveis e descubra novas leituras incríveis.</h3>
                  <br>
                  <br>
                  <br>
-                
-                <table border="1" style="text-align: center;" >
+
+                <table class="catalogo">
                     <thead>
+                        <tr>
                             <th>Imagem</th>
                             <th>Titulo</th>
                             <th>Autor</th>
                             <th>Genero</th>
+                        </tr>
                         <tr>
                             <td><img src="../assets/img/vidas_secas.jpg" alt="Img Livro vidas secas" width="100"></td>
                             <td>Vidas Secas</td>

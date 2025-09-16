@@ -4,19 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livrex</title>
+    <link rel="stylesheet" href="..\assets\style.css">
 </head>
 <body>
     <header>
-        <h1>Livrex</h1>
+        <div class="logo-container">
+            <img src="..\assets\img\logo.png" alt="" class="logo">
+            <span class="Livrex">Livrex</span>
+        </div>
     </header>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="catalogo.html">Catálogo</a>
-        <b>SAC</b>
-        <a href="equipe.html">Equipe</a>
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="catalogo.html">Catálogo</a>
+            SAC
+            <a href="equipe.html">Equipe</a>
+        </ul>
     </nav>
     <main>
+        <form>
+            <h1> Entre em contato com nossa equipe!! </h1>
 
+            <div>
+                <label for="nome">Nome</label><br>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div>
+                <label for="email">E-mail</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="assunto">Assunto</label><br>
+                <input type="text" id="assunto" name="assunto" required>
+            </div>
+
+            <div>
+                <label for="mensagem">Mensagem</label><br>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            </div>
+
+            <div>
+                <button type="reset">Enviar</button>
+            </div>
+        </form>
     </main>
     <footer>
         Este é um projeto com fim avaliativo pela universidade dos autores.
