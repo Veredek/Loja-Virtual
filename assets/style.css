@@ -65,18 +65,3 @@ ul {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
 }
-
-.catalogo {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.catalogo th,
-.catalogo td {
-  border: 1px solid black;
-  text-align: center;
-}
-
-.equipe {
-    width: 100%;
-}
