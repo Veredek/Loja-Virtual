@@ -15,43 +15,50 @@
     </header>
     <nav>
         <ul>
-            <a href="index.html">Home</a>
-            <a href="catalogo.html">Catálogo</a>
-            SAC
-            <a href="equipe.html">Equipe</a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li>SAC</li>
+            <li><a href="equipe.html">Equipe</a></li>
         </ul>
     </nav>
     <main>
-        <form>
+        <div class="container general-container">
             <h1> Entre em contato com nossa equipe!! </h1>
+        </div>
+        <br>
+        <div class="container general-container">
+            <form>
 
-            <div>
-                <label for="nome">Nome</label><br>
-                <input type="text" id="nome" name="nome" required>
-            </div>
+                <div>
+                    <label for="nome">Nome</label><br>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
 
-            <div>
-                <label for="email">E-mail</label><br>
-                <input type="email" id="email" name="email" required>
-            </div>
+                <div>
+                    <label for="email">E-mail</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <div>
-                <label for="assunto">Assunto</label><br>
-                <input type="text" id="assunto" name="assunto" required>
-            </div>
+                <div>
+                    <label for="assunto">Assunto</label><br>
+                    <input type="text" id="assunto" name="assunto" required>
+                </div>
 
-            <div>
-                <label for="mensagem">Mensagem</label><br>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-            </div>
+                <div>
+                    <label for="mensagem">Mensagem</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
 
-            <div>
-                <button type="reset">Enviar</button>
-            </div>
-        </form>
+                <div>
+                    <button type="submit" id="btn-send-email" class="btn">
+                        <span>Enviar</span>
+                    </button>
+                </div>
+            </form>
+        </div>
     </main>
     <footer>
-        Este é um projeto com fim avaliativo pela universidade dos autores.
+    Este é um projeto com fim avaliativo pela universidade dos autores.
     </footer>
 </body>
 </html>
