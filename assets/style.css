@@ -35,7 +35,7 @@ nav a {
 }
 
 main {
-    padding-left: 10px;
+    margin: 20px 20px;
     flex: 1;
 }
 
@@ -66,6 +66,16 @@ ul {
     font-weight: bold;
 }
 
+/* #region font */
+.eagle-lake-regular {
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* #endregion */
+
+/* #region catalogo */
 .catalogo {
     margin-left: auto;
     margin-right: auto;
@@ -76,7 +86,59 @@ ul {
   border: 1px solid black;
   text-align: center;
 }
+/* #endregion */
 
-.equipe {
-    width: 100%;
+/* #region equipe */
+.equipe-container {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    flex-wrap: wrap;
 }
+
+.member-card {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid black;
+    border-radius: 8px;         /* arredondamento */
+    overflow: hidden;           /* necessário para arredondar */
+    width: 18em;
+}
+
+.member-card th,
+.member-card td {
+    padding: 5px 5px;
+    text-align: center;
+}
+
+.member-card thead {
+    font-family: "Eagle Lake", serif;
+    font-size: 12px;
+    background-color: lightblue;
+}
+
+/*
+.member-card thead th {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    line-height: 1;
+} */
+
+.member-card tbody {
+    padding: 0px 5px;
+    background: linear-gradient(to bottom, lightblue, #333)
+}
+
+.member-card tbody img {
+    max-width: 100%;  /* nunca ultrapassa a largura da célula */
+    max-height: 30vh;
+    height: auto;     /* mantém proporção */
+    display: block;   /* remove espaços extras */
+    margin: 0 auto;   /* centraliza a imagem */
+}
+
+.member-card tfoot {
+    background-color: #333;
+    color: white;
+}
+/* #endregion */
