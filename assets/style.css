@@ -79,8 +79,10 @@ ul {
     box-sizing: border-box;
 }
 
-.general-container {
-    width: 60%;
+@media (min-width: 1000px) {
+    .general-container {
+        width: 60%;
+    }
 }
 
 /* #region font */
@@ -94,14 +96,33 @@ ul {
 
 /* #region catalogo */
 .catalogo {
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
 .catalogo th,
 .catalogo td {
   border: 1px solid black;
   text-align: center;
+}
+
+@media (orientation: portrait) {
+    .catalogo img {
+        width: 100px;
+    }
+}
+
+@media (orientation: landscape) {
+    .catalogo img {
+        width: 120px;
+    }
+}
+
+.catalogo-container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid black;
 }
 /* #endregion */
 
@@ -140,7 +161,7 @@ input {
 .equipe-container {
     display: flex;
     justify-content: center;
-    gap: 5vw;
+    gap: 2vw;
     flex-wrap: wrap;
 }
 
