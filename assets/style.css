@@ -48,6 +48,10 @@ footer {
     padding: 10px;
 }
 
+form label {
+    font-family: "Eagle Lake", serif;
+}
+
 ul {
     text-align: left;
     display: inline-block;
@@ -124,11 +128,10 @@ ul {
 input,
 textarea {
     width: 100%;
-    padding: 5px 8px;
-    max-width: 100%;
+    padding: 8px 15px;
+    margin: 8px auto;
     box-sizing: border-box;
     resize: none;
-    min-width: 50vw;
     border: 1px solid #333;
     border-radius: 8px;
 }
@@ -138,6 +141,7 @@ input {
 }
 
 #btn-send-email {
+    font-family: "Eagle Lake", serif;
     background-color: #333;
     padding: 5px 15px;
     color: white;
