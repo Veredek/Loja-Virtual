@@ -70,19 +70,13 @@ ul {
 }
 
 .container {
-    min-width: auto;
+    max-width: 1000px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 15px 15px;
     margin: 10px auto;
     box-sizing: border-box;
-}
-
-@media (min-width: 1000px) {
-    .general-container {
-        width: 60%;
-    }
 }
 
 /* #region font */
@@ -169,8 +163,8 @@ input {
     border-collapse: separate;
     border-spacing: 0;
     border: 2px solid black;
-    border-radius: 8px;         /* arredondamento */
-    overflow: hidden;           /* necessário para arredondar */
+    border-radius: 8px;
+    overflow: hidden;
     width: 18em;
 }
 
