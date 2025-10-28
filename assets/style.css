@@ -11,6 +11,7 @@
   --transition: 0.3s ease;
 }
 
+/* ===== FUNDO ANIMADO ===== */
 html, body {
   height: 100%;
   margin: 0;
@@ -30,6 +31,7 @@ html, body {
   100% { background-position: 0% 50%; }
 }
 
+/* ===== HEADER ===== */
 header {
   background: linear-gradient(90deg, rgba(10,10,20,0.9), rgba(15,25,40,0.9));
   padding: 15px 30px;
@@ -58,6 +60,7 @@ header {
   animation: pulse 3s infinite ease-in-out;
 }
 
+/* ===== NAV ===== */
 nav {
   background: rgba(15, 15, 30, 0.85);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -112,6 +115,7 @@ nav li.active {
   text-shadow: 0 0 10px var(--accent-glow);
 }
 
+/* ===== CONTAINERS ===== */
 .container {
   background: var(--card-dark);
   border-radius: 16px;
@@ -132,6 +136,7 @@ nav li.active {
   }
 }
 
+/* ===== TÍTULOS ===== */
 h1, h2 {
   color: var(--accent-light);
   text-align: center;
@@ -142,7 +147,7 @@ h1, h2 {
   color: var(--accent-light);
 }
 
-/* HOME */
+/* ===== HOME ===== */
 .home-section p {
   text-align: center;
   color: var(--secondary);
@@ -150,7 +155,7 @@ h1, h2 {
   line-height: 1.6;
 }
 
-/* CATÁLOGO */
+/* ===== CATÁLOGO ===== */
 .catalogo {
   width: 100%;
   border-collapse: collapse;
@@ -183,7 +188,7 @@ h1, h2 {
   box-shadow: 0 0 25px var(--accent-glow);
 }
 
-/* SAC */
+/* ===== FORM ===== */
 form {
   display: flex;
   flex-direction: column;
@@ -222,7 +227,7 @@ button:hover {
   box-shadow: 0 0 20px var(--accent-glow);
 }
 
-/* EQUIPE */
+/* ===== EQUIPE ===== */
 .equipe-container {
   display: flex;
   justify-content: center;
@@ -271,6 +276,7 @@ button:hover {
   margin-top: 4px;
 }
 
+/* ===== FOOTER ===== */
 footer {
   background: rgba(10, 10, 20, 0.9);
   color: var(--secondary);
@@ -281,11 +287,13 @@ footer {
   backdrop-filter: blur(6px);
 }
 
+/* ===== ANIMAÇÕES ===== */
 @keyframes pulse {
   0%, 100% { text-shadow: 0 0 8px var(--accent-glow); }
   50% { text-shadow: 0 0 16px var(--accent-glow); }
 }
 
+/* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
   .logo { height: 44px; }
   .member-card img { width: 140px; height: 140px; }
