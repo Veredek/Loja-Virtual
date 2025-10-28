@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Livrex</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAC | Livrex</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header>
@@ -16,33 +16,23 @@
 
   <nav>
     <ul>
-      <li class="active">Home</li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="catalogo.html">Catálogo</a></li>
-      <li><a href="sac.html">SAC</a></li>
+      <li class="active">SAC</li>
       <li><a href="equipe.html">Equipe</a></li>
     </ul>
   </nav>
 
   <main>
-    <section class="container home-container show">
-      <h1>Bem-vindo ao <span class="accent">Livrex!</span></h1>
-
-      <h2>O melhor site para compra de livros</h2>
-      <p>
-        O <strong>Livrex</strong> surgiu da necessidade de um site para compra de livros de formas simples e acessível.
-      </p>
-      <p>
-        Aqui você encontrará um <a href="catalogo.html" class="accent">catálogo</a> de livros à venda, sendo possível filtrar os livros por:
-      </p>
-
-      <ul>
-        <li><strong>Gênero:</strong> descubra obras que se alinham aos seus interesses.</li>
-        <li><strong>Autor:</strong> descubra obras dos seus autores favoritos.</li>
-      </ul>
-
-      <p>
-        Sendo possível comprá-los nos formatos <em>ebook</em> e <em>físico</em>.
-      </p>
+    <section class="container">
+      <h2>Entre em contato</h2>
+      <form>
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="text" placeholder="Assunto" required>
+        <textarea rows="5" placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
     </section>
   </main>
 
