@@ -89,7 +89,6 @@ ul {
   font-weight: 400;
   font-style: normal;
 }
-
 /* #endregion */
 
 /* #region catalogo */
@@ -184,24 +183,26 @@ input {
     background-color: lightblue;
 }
 
-/*
-.member-card thead th {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    line-height: 1;
-} */
-
 .member-card tbody {
     padding: 0px 5px;
-    background: linear-gradient(to bottom, lightblue, #333)
+    background: linear-gradient(to bottom, lightblue, #333);
 }
 
 .member-card tbody img {
-    max-width: 100%;  /* nunca ultrapassa a largura da célula */
-    max-height: 30vh;
-    height: auto;     /* mantém proporção */
-    display: block;   /* remove espaços extras */
-    margin: 0 auto;   /* centraliza a imagem */
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+    .member-card tbody img {
+        max-width: 160px;
+    }
 }
 
 .member-card tfoot {
