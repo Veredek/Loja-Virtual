@@ -1,61 +1,203 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Equipe | Livrex</title>
-  <link rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livrex</title>
+    <link rel="stylesheet" href="assets\style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
+    <!-- . -->
+    <style>
+        .grid-equipe {
+            display: grid;
+            gap: 10px;
+            padding: 0 20px;
+        }
+
+        @media (orientation: landscape) {
+            .grid-equipe {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(3, auto);
+            }
+            .grid-equipe img {
+                height: 150px;
+            }
+            .nome1       {order: 1; }
+            .nome2       {order: 2; }
+            .nome3       {order: 3; }
+            .nome4       {order: 4; }
+            .img1        {order: 5; }
+            .img2        {order: 6; }
+            .img3        {order: 7; }
+            .img4        {order: 8; }
+            .matricula1  {order: 9; }
+            .matricula2  {order: 10; }
+            .matricula3  {order: 11; }
+            .matricula4  {order: 12; }
+        }
+
+        @media (orientation: portrait) {
+            .grid-equipe {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(12, auto);
+            }
+            .grid-equipe img {
+                width: 60%;
+            }
+            .nome1       {order: 1; }
+            .nome2       {order: 4; }
+            .nome3       {order: 7; }
+            .nome4       {order: 10; }
+            .img1        {order: 2; }
+            .img2        {order: 5; }
+            .img3        {order: 8; }
+            .img4        {order: 11; }
+            .matricula1  {order: 3; }
+            .matricula2  {order: 6; }
+            .matricula3  {order: 9; }
+            .matricula4  {order: 12; }
+        }
+
+        </style>
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="assets/img/logo.png" alt="Logo Livrex" class="logo">
-      <span class="Livrex">LIVREX</span>
-    </div>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="catalogo.html">Catálogo</a></li>
-      <li><a href="sac.html">SAC</a></li>
-      <li class="active">Equipe</li>
-    </ul>
-  </nav>
-
-  <main>
-    <section class="container equipe-section">
-      <h2>Nossa Equipe</h2>
-      <div class="equipe-container">
-        <div class="member-card">
-          <img src="assets/img/Joao.jpg" alt="Foto João">
-          <h3>João Vitor Dias Venchiarutti dos Santos</h3>
-          <p class="matricula">Matrícula: 2650162423043</p>
+    <header>
+        <div class="logo-container">
+            <img src="assets\img\logo.png" alt="" class="logo">
+            <span class="Livrex">Livrex</span>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="sac.html">SAC</a></li>
+            <li>Equipe</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container general-container">
+            <h1>Nossa Equipe</h1>
         </div>
 
-        <div class="member-card">
-          <img src="assets/img/Hugo.jpg" alt="Foto Hugo">
-          <h3>Hugo Ribeiro Bernardes</h3>
-          <p class="matricula">Matrícula: 2650162423031</p>
-        </div>
+        <br>
 
-        <div class="member-card">
-          <img src="assets/img/Luana.jpg" alt="Foto Luana">
-          <h3>Luana Lucia Belloli Bani</h3>
-          <p class="matricula">Matrícula: 2650162423023</p>
-        </div>
+        <div class="equipe-container">
 
-        <div class="member-card">
-          <img src="assets/img/Giovanna.jpg" alt="Foto Giovanna">
-          <h3>Giovanna Souza Ferreira</h3>
-          <p class="matricula">Matrícula: 2650162423019</p>
-        </div>
-      </div>
-    </section>
-  </main>
+            <!-- 1 -->
+            <div class="container">
+                <table class="member-card">
+                    <thead>
+                        <tr>
+                            <th>
+                                João Vitor Dias Venchiarutti dos Santos
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="assets\img\Joao.jpg" alt="Foto João">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                Matrícula: 202502451083
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
 
-  <footer>
-    <p>© 2025 Livrex. Este é um projeto com fim avaliativo pela universidade dos autores.</p>
-  </footer>
+            <!-- 2 -->
+            <div class="container">
+                <table class="member-card">
+                    <thead>
+                        <tr>
+                            <th>
+                                Hugo Ribeiro Bernardes
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="assets\img\Hugo.jpg" alt="Foto Hugo">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                Matrícula: 202502276885
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- 3 -->
+            <div class="container">
+                <table class="member-card">
+                    <thead>
+                        <tr>
+                            <th>
+                                Luana Lucia Belloli Bani
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="assets\img\Luana.jpg" alt="Foto Luana">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                Matrícula: 202503324239
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- 4 -->
+            <div class="container">
+                <table class="member-card">
+                    <thead>
+                        <tr>
+                            <th>
+                                Giovanna Souza Ferreira
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="assets\img\Giovanna.jpg" alt="Foto Giovanna">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                Matrícula: 202503815691
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Este é um projeto com fim avaliativo pela universidade dos autores.
+    </footer>
 </body>
 </html>
