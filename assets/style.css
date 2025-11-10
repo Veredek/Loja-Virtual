@@ -143,6 +143,10 @@ input.invalid {
     border-color: red;
 }
 
+.invalid-label {
+    color: red;
+}
+
 #btn-send-email {
     font-family: "Eagle Lake", serif;
     background-color: #333;
