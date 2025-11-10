@@ -32,15 +32,16 @@
         </div>
         <br>
         <div class="container general-container">
-            <form>
+            <form id="sac-form">
                 <div>
                     <label for="nome">Nome</label><br>
                     <input type="text" name="nome" required>
                 </div>
 
                 <div>
+                    <p id="not-valid-email" style="color: red;"></p>
                     <label for="email">E-mail</label><br>
-                    <input type="email" name="email" required>
+                    <input type="email" id="email" name="email" required>
                 </div>
 
                 <div>
