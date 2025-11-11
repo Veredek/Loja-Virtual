@@ -1,0 +1,37 @@
+[
+    {
+        "id":    1,
+        "title": "Vidas Secas",
+        "image": "img/vidas_secas.jpg",
+        "genre": ["Romance"],
+        "autor": "Graciliano Ramos"
+    },
+    {
+        "id":    2,
+        "title": "Clean Code",
+        "image": "img/clean_code.jpg",
+        "genre": ["Tecnologia", "Programação"],
+        "autor": "Robert Cecil Martin"
+    },
+    {
+        "id":    3,
+        "title": "Mais Esperto Que o Diabo",
+        "image": "img/mais_esperto_que_o_diabo.jpg",
+        "genre": ["Autoajuda"],
+        "autor": "Napoleon Hill"
+    },
+    {
+        "id":    4,
+        "title": "Reality Is Broken",
+        "image": "img/reality_is_broken.jpg",
+        "genre": ["Psicologia", "Jogos"],
+        "autor": "Jane McGonigal"
+    },
+    {
+        "id":    5,
+        "title": "É Assim Que Acaba",
+        "image": "img/e_assim_que_acaba.jfif",
+        "genre": ["Romance", "Drama"],
+        "autor": "Colleen Hoover"
+    }
+]
