@@ -5,15 +5,28 @@ class ThemeManager {
     }
 
     init() {
+        
+        const header = document.querySelector('header');
+        if (!header) {
+            console.warn('Header não encontrado. Tema não será aplicado.');
+            return;
+        }
+        
         this.createThemeToggle();
-        this.applyTheme(this.currentTheme, false); // false = não aplicar transição na inicialização
+        this.applyTheme(this.currentTheme, false);
         this.bindEvents();
     }
 
     createThemeToggle() {
-        // Verificar se o botão já existe
+       
         if (!document.getElementById('themeToggle')) {
             const header = document.querySelector('header');
+            if (!header.querySelector('.theme-toggle-container')) {
+                const toggleContainer = document.createElement('div');
+                toggleContainer.className = 'theme-toggle-container';
+                header.appendChild(toggleContainer);
+            }
+            
             const themeToggle = document.createElement('button');
             themeToggle.id = 'themeToggle';
             themeToggle.className = 'theme-toggle';
@@ -21,7 +34,9 @@ class ThemeManager {
                 <span class="theme-icon">🌙</span>
                 <span class="theme-text">Tema Escuro</span>
             `;
-            header.appendChild(themeToggle);
+            
+            const toggleContainer = header.querySelector('.theme-toggle-container') || header;
+            toggleContainer.appendChild(themeToggle);
         }
         this.themeToggle = document.getElementById('themeToggle');
     }
@@ -29,7 +44,6 @@ class ThemeManager {
     applyTheme(theme, withTransition = true) {
         const darkStylesheet = document.getElementById('dark-styles');
         
-        // Aplicar classe de transição apenas se withTransition for true
         if (withTransition) {
             document.body.classList.add('theme-transition');
         }
@@ -68,6 +82,8 @@ class ThemeManager {
     }
 
     updateToggleButton(theme) {
+        if (!this.themeToggle) return;
+        
         const themeIcon = this.themeToggle.querySelector('.theme-icon');
         const themeText = this.themeToggle.querySelector('.theme-text');
         
@@ -82,13 +98,23 @@ class ThemeManager {
 
     toggleTheme() {
         const newTheme = this.currentTheme === 'claro' ? 'escuro' : 'claro';
-        this.applyTheme(newTheme, true); // true = aplicar transição
+        this.applyTheme(newTheme, true);
     }
 
     bindEvents() {
-        this.themeToggle.addEventListener('click', () => this.toggleTheme());
+        if (this.themeToggle) {
+            this.themeToggle.addEventListener('click', () => this.toggleTheme());
+        }
     }
 }
+
+// Inicializar quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', () => {
     new ThemeManager();
 });
+
+setTimeout(() => {
+    if (!document.getElementById('themeToggle')) {
+        new ThemeManager();
+    }
+}, 1000);
