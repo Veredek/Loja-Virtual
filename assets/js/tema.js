@@ -1,32 +1,36 @@
 class ThemeManager {
     constructor() {
         this.currentTheme = localStorage.getItem('livrexTheme') || 'claro';
+        this.maxAttempts = 3;
+        this.attemptCount = 0;
         this.init();
     }
 
     init() {
+        this.tryCreateToggle();
         
-        const header = document.querySelector('header');
-        if (!header) {
-            console.warn('Header não encontrado. Tema não será aplicado.');
-            return;
+        if (!document.getElementById('themeToggle')) {
+            document.addEventListener('DOMContentLoaded', () => {
+                this.tryCreateToggle();
+            });
         }
         
-        this.createThemeToggle();
-        this.applyTheme(this.currentTheme, false);
-        this.bindEvents();
+        setTimeout(() => {
+            if (!document.getElementById('themeToggle') && this.attemptCount < this.maxAttempts) {
+                this.tryCreateToggle();
+            }
+        }, 1000);
     }
 
-    createThemeToggle() {
-       
-        if (!document.getElementById('themeToggle')) {
-            const header = document.querySelector('header');
-            if (!header.querySelector('.theme-toggle-container')) {
-                const toggleContainer = document.createElement('div');
-                toggleContainer.className = 'theme-toggle-container';
-                header.appendChild(toggleContainer);
-            }
-            
+    tryCreateToggle() {
+        this.attemptCount++;
+        
+        const header = document.querySelector('header');
+        if (!header) return false;
+
+        if (document.getElementById('themeToggle')) return true;
+
+        try {
             const themeToggle = document.createElement('button');
             themeToggle.id = 'themeToggle';
             themeToggle.className = 'theme-toggle';
@@ -35,10 +39,16 @@ class ThemeManager {
                 <span class="theme-text">Tema Escuro</span>
             `;
             
-            const toggleContainer = header.querySelector('.theme-toggle-container') || header;
-            toggleContainer.appendChild(themeToggle);
+            header.appendChild(themeToggle);
+            this.themeToggle = themeToggle;
+            
+            this.applyTheme(this.currentTheme, false);
+            this.bindEvents();
+            
+            return true;
+        } catch (error) {
+            return false;
         }
-        this.themeToggle = document.getElementById('themeToggle');
     }
 
     applyTheme(theme, withTransition = true) {
@@ -65,7 +75,6 @@ class ThemeManager {
         localStorage.setItem('livrexTheme', theme);
         this.currentTheme = theme;
         
-        // Remover classe de transição após a animação
         if (withTransition) {
             setTimeout(() => {
                 document.body.classList.remove('theme-transition');
@@ -74,11 +83,15 @@ class ThemeManager {
     }
 
     loadDarkTheme() {
-        const link = document.createElement('link');
-        link.id = 'dark-styles';
-        link.rel = 'stylesheet';
-        link.href = 'assets/dark.css';
-        document.head.appendChild(link);
+        try {
+            const link = document.createElement('link');
+            link.id = 'dark-styles';
+            link.rel = 'stylesheet';
+            link.href = 'assets/dark.css';
+            document.head.appendChild(link);
+        } catch (error) {
+            // Silencioso em caso de erro
+        }
     }
 
     updateToggleButton(theme) {
@@ -108,13 +121,7 @@ class ThemeManager {
     }
 }
 
-// Inicializar quando o DOM estiver carregado
+// Inicializar o sistema de tema
 document.addEventListener('DOMContentLoaded', () => {
     new ThemeManager();
 });
-
-setTimeout(() => {
-    if (!document.getElementById('themeToggle')) {
-        new ThemeManager();
-    }
-}, 1000);
