@@ -28,7 +28,7 @@ html, body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 17px;
+    font-size: 18px;
     background-color: var(--bg-primary);
     color: var(--text-primary);
 }
@@ -106,23 +106,17 @@ ul {
 }
 
 .container {
-    max-width: 1000px;
-    background-color: var(--bg-container);
-    border-radius: 20px;
-    box-shadow: 0 0 15px var(--shadow-color);
-    padding: 15px 15px;
-    margin: 10px auto;
-    box-sizing: border-box;
-}
-
-.general-container {
-    text-align: center;
-}
-
-.containers-wrapper {
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
+    max-width: 1000px;
+    background-color: var(--bg-container);
+    padding: 15px 15px;
+    margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px var(--shadow-color);
+    box-sizing: border-box;
 }
 
 /* #region font */
@@ -180,6 +174,10 @@ ul {
 /* #endregion */
 
 /* #region SAC */
+.container--sac {
+    max-width: 500px;
+}
+
 input,
 textarea {
     width: 100%;
@@ -193,14 +191,14 @@ textarea {
     color: var(--input-text);
 }
 
+input {
+    text-align: center;
+}
+
 input:focus,
 textarea:focus {
     border-color: #4fc3f7;
     outline: none;
-}
-
-input {
-    text-align: center;
 }
 
 input.invalid {
@@ -209,6 +207,11 @@ input.invalid {
 
 .invalid-label {
     color: var(--invalid-color);
+}
+
+#sac-form {
+    width: 100%;
+    margin: 0 auto;
 }
 
 #btn-send-email {
@@ -228,21 +231,24 @@ input.invalid {
 /* #endregion */
 
 /* #region equipe */
-.equipe-container {
+.equipe-wrapper {
     display: flex;
-    justify-content: center;
-    gap: 40px;
     flex-wrap: wrap;
-    padding: 20px;
+    justify-content: center;
+    gap: 10px;
+    align-items: stretch;
 }
 
 .member-card {
+    flex: 1 1 220px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    max-width: 250px;
-    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px var(--shadow-color);
 }
 
 .member-photo {
@@ -271,22 +277,15 @@ input.invalid {
 }
 
 .member-matricula {
-    font-size: 14px;
-    color: var(--text-primary);
-    text-align: center;
     margin: 0;
 }
 
 @media (max-width: 768px) {
-    .equipe-container {
-        gap: 30px;
-    }
-    
     .member-photo {
         width: 140px;
         height: 140px;
     }
-    
+
     .member-name {
         font-size: 15px;
         max-width: 200px;
@@ -294,15 +293,11 @@ input.invalid {
 }
 
 @media (max-width: 480px) {
-    .equipe-container {
-        gap: 25px;
-    }
-    
     .member-photo {
         width: 130px;
         height: 130px;
     }
-    
+
     .member-name {
         font-size: 14px;
         max-width: 180px;
