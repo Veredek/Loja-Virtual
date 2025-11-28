@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
      // --- ❌ CANCEL ---
     if (e.target.classList.contains("cancel-btn")) {
 
-      tds[0].innerHTML = linha.dataset.originalImage;
+      tds[0].innerHTML = `<img src="assets/img/${linha.dataset.originalImage}" alt="${linha.dataset.originalImage}">`;
       tds[1].textContent = linha.dataset.originalTitle;
       tds[2].textContent = linha.dataset.originalAuthor;
       tds[3].textContent = linha.dataset.originalGenres;
@@ -139,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // Atualizar visualmente os valores
           const tds = linha.querySelectorAll("td");
 
+          tds[0].innerHTML = `<img src="assets/img/${data.image}" alt="${data.title}">`;
           tds[1].textContent = data.title;
           tds[2].textContent = data.author;
           tds[3].textContent = data.genres.join(", ");
