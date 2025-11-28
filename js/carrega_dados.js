@@ -1,4 +1,19 @@
-
+function excluirLivro(id) {
+    fetch("http://localhost/livrex/api/delete_book.php", {
+        method: "POST",
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: "id=" + id
+    })
+    .then(r => r.json())
+    .then(data => {
+        if (data.success) {
+            alert("Livro excluído com sucesso!");
+            location.reload();
+        } else {
+            alert("Erro ao excluir: " + data.error);
+        }
+    });
+}
 
 console.log("loading: carregadados.js");
 document.addEventListener("DOMContentLoaded", function () {
@@ -157,8 +172,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // --- 🗑️ DELETE ---
     if (e.target.classList.contains("delete-btn")) {
-      console.log("Deletando livro de ID:", bookId);
-      // Aqui você pode chamar API para deletar
+      const id = e.target.dataset.id;
+
+      if (confirm("Tem certeza que deseja excluir este livro?")) {
+            excluirLivro(bookId);
+        } else {
+            return;
+        }
     }
   });
 
