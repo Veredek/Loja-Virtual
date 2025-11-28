@@ -29,10 +29,10 @@ $stmtLivro->execute();
 $book_id = $stmtLivro->insert_id;
 
 // --- inserir gêneros ---
-foreach ($generos as $genres_ids) {
+foreach ($generos as $genres_id) {
     $sqlGeneros = "INSERT INTO book_genres (book_id, genre_id) VALUES (?, ?)";
     $stmtGeneros = $conn->prepare($sqlGeneros);
-    $stmtGeneros->bind_param("ii", $book_id, $genres_ids);
+    $stmtGeneros->bind_param("ii", $book_id, $genres_id);
     $stmtGeneros->execute();
 }
 
