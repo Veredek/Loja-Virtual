@@ -4,31 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livrex</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <script src="assets/js/tema.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/tema.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="assets\img\logo.png" alt="" class="logo">
-            <span class="Livrex">Livrex</span>
-        </div>
-    </header>
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li><a href="catalogo.html">Catálogo</a></li>
-            <li><a href="sac.html">SAC</a></li>
-            <li><a href="equipe.html">Equipe</a></li>
-        </ul>
-    </nav>
+    <?php include 'includes\header.php'; ?>
+    <?php include 'includes\nav.php'; ?>
+
     <main>
         <div class="container">
 
             <h1>Bem vindo ao <b>Livrex!</b></h1>
             <h2>O melhor site para compra de livros</h2>
             <p>O <b>Livrex</b> surgiu da necessidade de um site para compra de livros de formas simples e acessível.</p>
-            <p>Aqui você encontrará um <a href="catalogo.html">catálogo</a> de livros a venda, sendo possível filtrar os livros por:</p>
+            <p>Aqui você encontrará um <a href="catalogo.php">catálogo</a> de livros a venda, sendo possível filtrar os livros por:</p>
             <ul>
                 <li><b>Gênero:</b> descubra obras que se alinham aos seus interesses.</li>
                 <li><b>Autor:</b> descubra obras dos seus autores favoritos.</li>
@@ -37,8 +26,7 @@
 
         </div>
     </main>
-    <footer>
-        Este é um projeto com fim avaliativo pela universidade dos autores.
-    </footer>
+
+    <?php include 'includes\footer.php'?>
 </body>
 </html>

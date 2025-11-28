@@ -8,13 +8,13 @@ class ThemeManager {
 
     init() {
         this.tryCreateToggle();
-        
+
         if (!document.getElementById('themeToggle')) {
             document.addEventListener('DOMContentLoaded', () => {
                 this.tryCreateToggle();
             });
         }
-        
+
         setTimeout(() => {
             if (!document.getElementById('themeToggle') && this.attemptCount < this.maxAttempts) {
                 this.tryCreateToggle();
@@ -24,7 +24,7 @@ class ThemeManager {
 
     tryCreateToggle() {
         this.attemptCount++;
-        
+
         const header = document.querySelector('header');
         if (!header) return false;
 
@@ -38,13 +38,13 @@ class ThemeManager {
                 <span class="theme-icon">🌙</span>
                 <span class="theme-text">Tema Escuro</span>
             `;
-            
+
             header.appendChild(themeToggle);
             this.themeToggle = themeToggle;
-            
+
             this.applyTheme(this.currentTheme, false);
             this.bindEvents();
-            
+
             return true;
         } catch (error) {
             return false;
@@ -53,11 +53,11 @@ class ThemeManager {
 
     applyTheme(theme, withTransition = true) {
         const darkStylesheet = document.getElementById('dark-styles');
-        
+
         if (withTransition) {
             document.body.classList.add('theme-transition');
         }
-        
+
         if (theme === 'escuro') {
             if (!darkStylesheet) {
                 this.loadDarkTheme();
@@ -71,10 +71,10 @@ class ThemeManager {
             }
             this.updateToggleButton('claro');
         }
-        
+
         localStorage.setItem('livrexTheme', theme);
         this.currentTheme = theme;
-        
+
         if (withTransition) {
             setTimeout(() => {
                 document.body.classList.remove('theme-transition');
@@ -87,7 +87,7 @@ class ThemeManager {
             const link = document.createElement('link');
             link.id = 'dark-styles';
             link.rel = 'stylesheet';
-            link.href = 'assets/dark.css';
+            link.href = 'css/dark.css';
             document.head.appendChild(link);
         } catch (error) {
             // Silencioso em caso de erro
@@ -96,10 +96,10 @@ class ThemeManager {
 
     updateToggleButton(theme) {
         if (!this.themeToggle) return;
-        
+
         const themeIcon = this.themeToggle.querySelector('.theme-icon');
         const themeText = this.themeToggle.querySelector('.theme-text');
-        
+
         if (theme === 'escuro') {
             themeIcon.textContent = '☀️';
             themeText.textContent = 'Tema Claro';

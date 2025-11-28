@@ -2,23 +2,23 @@
 :root {
     --bg-primary: #1a1a2e;
     --bg-secondary: #0f3460;
-    --bg-nav: #1a1a2e;
+    --bg-nav: #333;
     --bg-container: #2d4059;
     --bg-footer: #0f3460;
     --text-primary: #e0e0e0;
     --text-secondary: #e0e0e0;
     --text-nav: #b0b0b0;
-    --border-color: #2d4059;
+    --border-color: gray;
     --shadow-color: rgba(15, 52, 96, 0.3);
     --btn-bg: #0f3460;
     --btn-text: #e0e0e0;
-    --btn-hover-bg: #2d4059;
+    --btn-hover-bg: #4fc2f749;
     --btn-hover-text: #ffffff;
     --btn-hover-border: #4fc3f7;
-    --table-header-bg: #0f3460;
-    --table-body-gradient: linear-gradient(to bottom, #2d4059, #1a1a2e);
-    --table-footer-bg: #0f3460;
-    --input-bg: #1a1a2e;
+    --table-header-bg: #333;
+    --table-body-bg: rgba(255, 255, 255, 0.1);
+    --table-body-bg-secundary: rgba(255, 255, 255, 0.1);
+    --input-bg: rgba(255, 255, 255, 0.1);
     --input-text: #e0e0e0;
     --invalid-color: #f44336;
 }

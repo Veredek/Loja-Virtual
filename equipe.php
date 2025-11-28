@@ -4,27 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livrex</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <script src="assets/js/tema.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/tema.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="assets\img\logo.png" alt="" class="logo">
-            <span class="Livrex">Livrex</span>
-        </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="catalogo.html">Catálogo</a></li>
-            <li><a href="sac.html">SAC</a></li>
-            <li>Equipe</li>
-        </ul>
-    </nav>
+    <?php include 'includes\header.php'; ?>
+    <?php include 'includes\nav.php'; ?>
+
     <main>
         <div class="container container--equipe">
             <h1>Nossa Equipe</h1>
@@ -55,8 +44,7 @@
 
         </div>
     </main>
-    <footer>
-        Este é um projeto com fim avaliativo pela universidade dos autores.
-    </footer>
+
+    <?php include 'includes\footer.php'?>
 </body>
 </html>
